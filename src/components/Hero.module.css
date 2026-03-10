@@ -1,0 +1,239 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+/* Particles */
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: var(--accent-start);
+  opacity: 0.3;
+  animation: particle-float linear infinite;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Avatar */
+.avatarWrapper {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.avatarGlow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.25), transparent 70%);
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.avatarRing {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  padding: 4px;
+  background: var(--accent-gradient);
+  animation: spin-slow 20s linear infinite;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-primary);
+  animation: spin-slow 20s linear infinite reverse;
+}
+
+.statusBadge {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: rgba(17, 17, 40, 0.9);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #34d399;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  animation: pulse-glow 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+}
+
+/* Text */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.greeting {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.nameAccent {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.roleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  margin-top: 4px;
+}
+
+.roleText {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--accent-end);
+}
+
+.cursor {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--accent-end);
+  animation: blink-caret 1s step-end infinite;
+  margin-left: 2px;
+}
+
+.tagline {
+  max-width: 600px;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+/* CTAs */
+.ctas {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+  animation: float 3s ease-in-out infinite;
+}
+
+.scrollIndicator span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-tertiary);
+}
+
+.mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid var(--text-tertiary);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.wheel {
+  width: 3px;
+  height: 8px;
+  background: var(--text-tertiary);
+  border-radius: 2px;
+  animation: float 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .avatarRing {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatarRing {
+    width: 130px;
+    height: 130px;
+  }
+
+  .ctas {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .ctas a {
+    width: 100%;
+    justify-content: center;
+  }
+}

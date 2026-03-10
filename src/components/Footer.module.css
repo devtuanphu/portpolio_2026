@@ -1,0 +1,148 @@
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 60px 0 32px;
+  background: rgba(5, 5, 16, 0.8);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-gradient);
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: white;
+}
+
+.logoText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.brandDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+/* Quick Links */
+.linksTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--accent-end);
+  padding-left: 4px;
+}
+
+/* Social */
+.socialLinks {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--accent-end);
+  border-color: var(--accent-end);
+  background: rgba(6, 182, 212, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Bottom */
+.bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .brandDesc {
+    margin: 0 auto;
+  }
+
+  .linksList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .link:hover {
+    padding-left: 0;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}

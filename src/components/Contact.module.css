@@ -1,0 +1,140 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Info Column */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.infoText {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--accent-start);
+  flex-shrink: 0;
+}
+
+.contactCard:hover .contactIcon {
+  background: rgba(124, 58, 237, 0.2);
+}
+
+.contactLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.contactValue {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Form Column */
+.form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--accent-start);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .form {
+    padding: 28px;
+  }
+}
