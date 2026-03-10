@@ -150,13 +150,80 @@
 
   .imageCol {
     position: static;
-    max-width: 360px;
+    max-width: 320px;
     margin: 0 auto;
   }
 }
 
+@media (max-width: 768px) {
+  .bio {
+    font-size: 0.95rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .infoCard {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .infoIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .infoValue {
+    font-size: 0.82rem;
+    word-break: break-word;
+  }
+
+  .eduCard {
+    padding: 20px;
+  }
+
+  .eduIconWrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .eduTitle {
+    font-size: 0.95rem;
+  }
+
+  .eduSub {
+    font-size: 0.82rem;
+  }
+
+  .certBadge {
+    font-size: 0.78rem;
+  }
+}
+
 @media (max-width: 480px) {
+  .imageCol {
+    max-width: 260px;
+  }
+
+  .bio {
+    font-size: 0.88rem;
+  }
+
   .infoGrid {
     grid-template-columns: 1fr;
+  }
+
+  .infoCard {
+    padding: 12px 16px;
+  }
+
+  .eduHeader {
+    gap: 12px;
+  }
+
+  .eduTitle {
+    font-size: 0.88rem;
   }
 }

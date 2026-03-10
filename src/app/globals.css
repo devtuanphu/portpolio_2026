@@ -71,6 +71,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
+  overflow-x: hidden;
 }
 
 body {
@@ -86,6 +87,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* Custom Scrollbar */
@@ -493,10 +495,33 @@ img {
   .section-header {
     margin-bottom: 40px;
   }
+  .gradient-border-card-inner {
+    padding: 24px;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
   .section {
     padding: 48px 0;
+  }
+  .section-header {
+    margin-bottom: 32px;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+  .gradient-border-card-inner {
+    padding: 20px;
+  }
+  .btn {
+    padding: 11px 20px;
+    font-size: 0.85rem;
   }
 }

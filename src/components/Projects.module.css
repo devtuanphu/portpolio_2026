@@ -120,4 +120,40 @@
   .grid {
     grid-template-columns: 1fr;
   }
+
+  .cardContent {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .meta {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardContent {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .cardTop {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 0.98rem;
+  }
+
+  .description {
+    font-size: 0.82rem;
+  }
 }

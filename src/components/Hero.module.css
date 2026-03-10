@@ -205,14 +205,37 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--nav-height) + 16px);
+    min-height: calc(100vh - 20px);
+  }
+
+  .content {
+    gap: 24px;
+    padding: 0 8px;
+  }
+
   .avatarRing {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .greeting {
+    font-size: 0.95rem;
+  }
+
+  .roleText,
+  .cursor {
+    font-size: 1.1rem;
   }
 
   .tagline {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     padding: 0 8px;
+  }
+
+  .ctas {
+    gap: 12px;
   }
 
   .scrollIndicator {
@@ -222,14 +245,29 @@
 
 @media (max-width: 480px) {
   .avatarRing {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .greeting {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .roleText,
+  .cursor {
+    font-size: 0.95rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+    padding: 0 4px;
   }
 
   .ctas {
     flex-direction: column;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 16px;
   }
 
   .ctas a {
